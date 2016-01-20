@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "ngf-max-height": {
+            "context": "button"
+        },
+        "ngf-thumbnail": {
+            "context": "img"
+        },
+        "show-errors": {
+            "context": "div"
+        }
+    }
+}

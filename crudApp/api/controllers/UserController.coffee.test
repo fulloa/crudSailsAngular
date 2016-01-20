@@ -1,0 +1,25 @@
+class Users 
+    constructor: ->
+    upload:(req, res) ->
+        if req.body.id
+            req.file('file').upload 
+                dirname: '../public/uploads/'
+            ,
+                (err, files) ->
+                    if err
+                        return res.serverError err
+                    User.findOne
+                            id:req.body.id
+                        .exec   (err, user) -> 
+                            pathComponents = files[0].fd.split '/';
+                            pathComponents.pop();
+                            pathComponents.pop();
+                            path = pathComponents.join "/"
+                            if user.image != '/images/user.png'
+                                try
+                                    require 'fs'
+                                    .unlinkSync path + user.image
+                                catch
+                                    console.log 'problemas al borrar imagen antigua'
+                            true    
+module.exports = Users

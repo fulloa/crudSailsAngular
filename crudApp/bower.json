@@ -1,0 +1,22 @@
+{
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-bootstrap": "~1.1.0",
+    "angular-i18n": "~1.4.8",
+    "angular-bootstrap-show-errors": "~2.3.0",
+    "ng-file-upload": "~11.1.1"
+  },
+  "name": "crudApp",
+  "version": "0.0.0",
+  "author": "pedrohernandezletelier",
+  "private": true
+}
